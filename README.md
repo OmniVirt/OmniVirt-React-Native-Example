@@ -13,7 +13,7 @@ Following with this command:
 $ yarn install
 ```
 ### Replace YOUR_USERNAME
-There is a file named "android/local.properties". Open and replace YOUR_USERNAME into your username.
+There is a "local.properties" file under "android" folder. Open it with your text editor and replace YOUR_USERNAME into your username.
 ### Run On iOS
 ```bash
 $ react-native run-ios

@@ -1,0 +1,7 @@
+rootProject.name = 'OmniVirtReactNativeExample'
+include ':omnivirt-react-native-webview'
+project(':omnivirt-react-native-webview').projectDir = new File(rootProject.projectDir, '../node_modules/omnivirt-react-native-webview/android')
+include ':omnivirt-react-native-sensors'
+project(':omnivirt-react-native-sensors').projectDir = new File(rootProject.projectDir, '../node_modules/omnivirt-react-native-sensors/android')
+
+include ':app'

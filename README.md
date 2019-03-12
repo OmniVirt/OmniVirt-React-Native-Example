@@ -11,7 +11,7 @@ Then add a missing directory:
 ```
 mkdir android/app/src/main/assets
 ```
-placing this in scripts part of package.json
+Place this in scripts part of package.json:
 ```
 "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
 ```

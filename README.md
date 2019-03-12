@@ -3,7 +3,7 @@ This example following instruction from [React Native Getting Started](https://f
 
 ## Installation
 
-### Install SDK
+### Install OmniVirt SDK
 ```bash
 $ yarn add omnivirt-react-native-sdk --save
 
@@ -11,7 +11,7 @@ $ react-native link omnivirt-react-native-sensors
 $ react-native link omnivirt-react-native-webview
 ```
 ## Running
-### Install Modules
+### Install Module Dependencies
 ```bash
 $ yarn install
 ```

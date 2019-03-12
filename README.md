@@ -15,7 +15,7 @@ Place this in scripts part of package.json:
 ```
 "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
 ```
-[Adding OmniVirt VRPlayer](https://github.com/OmniVirt/OmniVirt-React-Native-SDK)
+[Adding OmniVirt VRPlayer Documentation](https://github.com/OmniVirt/OmniVirt-React-Native-SDK)
 
 ## Running Example
 ### Install Dependencies

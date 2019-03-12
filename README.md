@@ -10,7 +10,42 @@ $ yarn add omnivirt-react-native-sdk --save
 $ react-native link omnivirt-react-native-sensors
 $ react-native link omnivirt-react-native-webview
 ```
-## Running
+### Import VRPlayer
+```javascript
+import {VRPlayer, Feature, Mode, Quality} from "omnivirt-react-native-sdk"
+```
+### Add VRPlayer
+```javascript
+<VRPlayer ref="vrPlayer" />
+```
+### Load Content
+Please thr following code in componentDidMount().
+```javascript
+this.refs.vrPlayer.load(CONTENT_ID)
+```
+Please change CONTENT_ID into your creative id, for example: 24.
+### Listen to onExpanded and onCollapsed
+```javascript
+<VRPlayer ref="vrPlayer"
+          onExpanded={this.handleOnExpanded.bind(this)}
+          onCollapsed={this.handleOnCollapsed.bind(this)} />
+```
+Adding the following to your components:
+```javascript
+handleOnExpanded(player) {
+  this.setState({
+    isPlayerInFullscreenMode: true
+  })
+}
+handleOnCollapsed(player) {
+  this.setState({
+    isPlayerInFullscreenMode: false
+  })
+}
+```
+You have to manage expand and collapse by yourself.
+
+## Running Example
 ### Install Module Dependencies
 ```bash
 $ yarn install

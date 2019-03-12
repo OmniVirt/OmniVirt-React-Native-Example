@@ -1,52 +1,24 @@
 # React Native VR Player Example
-This example following instruction from [React Native Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) and additional instruction below to get it able to run on iOS and Android device.
+This example was following an instruction from [React Native Getting Started - Awesome Tutorial](https://facebook.github.io/react-native/docs/getting-started.html) and also used an additional instruction below to get it ran on iOS and Android device.
 
-## Installation
+## Additional Instruction Of [Awesome Tutorial](https://facebook.github.io/react-native/docs/getting-started.html)
 
-### Install OmniVirt SDK
-```bash
-$ yarn add omnivirt-react-native-sdk --save
-
-$ react-native link omnivirt-react-native-sensors
-$ react-native link omnivirt-react-native-webview
+Create a file named **local.properties** in "android" folder. Don't forget to replace YOUR_USERNAME into your username.
 ```
-### Import VRPlayer
-```javascript
-import {VRPlayer, Feature, Mode, Quality} from "omnivirt-react-native-sdk"
+sdk.dir = /Users/YOUR_USERNAME/Library/Android/sdk
 ```
-### Add VRPlayer
-```javascript
-<VRPlayer ref="vrPlayer" />
+Then add a missing directory:
 ```
-### Load Content
-Please thr following code in componentDidMount().
-```javascript
-this.refs.vrPlayer.load(CONTENT_ID)
+mkdir android/app/src/main/assets
 ```
-Please change CONTENT_ID into your creative id, for example: 24.
-### Listen to onExpanded and onCollapsed
-```javascript
-<VRPlayer ref="vrPlayer"
-          onExpanded={this.handleOnExpanded.bind(this)}
-          onCollapsed={this.handleOnCollapsed.bind(this)} />
+placing them in scripts part of package.json
 ```
-Adding the following to your components:
-```javascript
-handleOnExpanded(player) {
-  this.setState({
-    isPlayerInFullscreenMode: true
-  })
-}
-handleOnCollapsed(player) {
-  this.setState({
-    isPlayerInFullscreenMode: false
-  })
-}
+"android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
 ```
-You have to manage expand and collapse by yourself.
+[Adding OmniVirt VRPlayer](https://github.com/OmniVirt/OmniVirt-React-Native-SDK)
 
 ## Running Example
-### Install Module Dependencies
+### Install Dependencies
 ```bash
 $ yarn install
 ```
@@ -64,17 +36,3 @@ $ yarn run android-linux
 ```
 These will deploy on your Android device.
 
-## Additional Instruction From [Awesome Tutorial](https://facebook.github.io/react-native/docs/getting-started.html)
-
-Create a file named **local.properties** in "android" folder. Don't forget to replace YOUR_USERNAME into your username.
-```
-sdk.dir = /Users/YOUR_USERNAME/Library/Android/sdk
-```
-Then add a missing directory:
-```
-mkdir android/app/src/main/assets
-```
-placing them in scripts part of package.json
-```
-"android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
-```

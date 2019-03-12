@@ -29,7 +29,7 @@ $ yarn run android-linux
 ```
 These will deploy on your Android device.
 
-## Additional Instruction From Awesome Tutorial
+## Additional Instruction From [Awesome Tutorial](https://facebook.github.io/react-native/docs/getting-started.html)
 
 Create a file named **local.properties** in "android" folder. Don't forget to replace YOUR_USERNAME into your username.
 ```

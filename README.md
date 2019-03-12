@@ -8,13 +8,20 @@ This example following instruction from [React Native Getting Started](https://f
 ```bash
 $ brew install yarn
 ```
-Following with this command:
+### Install OmniVirt React Native SDK
+```bash
+yarn add omnivirt-react-native-sdk --save
+
+react-native link omnivirt-react-native-sensors
+react-native link omnivirt-react-native-webview
+```
+## Running
+### Install Modules
 ```bash
 $ yarn install
 ```
 ### Replace YOUR_USERNAME
 There is a "local.properties" file under "android" folder. Open it with your text editor and replace YOUR_USERNAME into your username.
-## Running
 ### Run On iOS
 ```bash
 $ react-native run-ios

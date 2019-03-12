@@ -10,10 +10,10 @@ $ brew install yarn
 ```
 ### Install OmniVirt React Native SDK
 ```bash
-yarn add omnivirt-react-native-sdk --save
+$ yarn add omnivirt-react-native-sdk --save
 
-react-native link omnivirt-react-native-sensors
-react-native link omnivirt-react-native-webview
+$ react-native link omnivirt-react-native-sensors
+$ react-native link omnivirt-react-native-webview
 ```
 ## Running
 ### Install Modules

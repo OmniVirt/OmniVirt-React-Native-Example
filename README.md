@@ -1,7 +1,7 @@
 # React Native VR Player Example
 This example was following an instruction from [React Native Getting Started - Awesome Tutorial](https://facebook.github.io/react-native/docs/getting-started.html) and also used an additional instruction below to get it ran on iOS and Android device.
 
-## Additional Instruction Of [Awesome Tutorial](https://facebook.github.io/react-native/docs/getting-started.html)
+## Additional Instruction From [Awesome Tutorial](https://facebook.github.io/react-native/docs/getting-started.html)
 
 Create a file named **local.properties** in "android" folder. Don't forget to replace YOUR_USERNAME into your username.
 ```

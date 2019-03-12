@@ -3,12 +3,7 @@ This example following instruction from [React Native Getting Started](https://f
 
 ## Installation
 
-### Install Yarn
-[Yarn](https://yarnpkg.com/en/docs) is a new package manager for JavaScript — a fast, reliable, and secure alternative npm client.
-```bash
-$ brew install yarn
-```
-### Install OmniVirt React Native SDK
+### Install SDK
 ```bash
 $ yarn add omnivirt-react-native-sdk --save
 

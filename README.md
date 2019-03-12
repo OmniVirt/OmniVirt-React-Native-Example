@@ -24,13 +24,13 @@ $ yarn install
 ```
 ### Replace YOUR_USERNAME
 There is a "local.properties" file under "android" folder. Open it with your text editor and replace YOUR_USERNAME into your username.
-### Run On iOS
+### Run on iOS
 ```bash
 $ react-native run-ios
 ```
 You can open an xcode project from "ios" folder (OmniVirtReactNativeExample.xcodeproj) to deploy it on your iOS device.
 
-### Run On Android
+### Run on Android
 ```bash
 $ yarn run android-linux
 ```

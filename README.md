@@ -19,7 +19,7 @@ Place this in scripts part of **package.json**:
 
 ## Running Example
 ### Install Prerequisite Tools
-Please install [Android Studio](https://developer.android.com/studio) and [XCode](https://itunes.apple.com/th/app/xcode/id497799835?mt=12). Don't forget to install Xcode Command Line Tools by using following command:
+Please install [Android Studio](https://developer.android.com/studio) and [XCode](https://itunes.apple.com/th/app/xcode/id497799835?mt=12). Don't forget to install Xcode Command Line Tools by using the following command:
 ```bash
 xcode-select --install
 ```

@@ -18,6 +18,11 @@ Place this in scripts part of **package.json**:
 [Adding OmniVirt VRPlayer Documentation](https://github.com/OmniVirt/OmniVirt-React-Native-SDK)
 
 ## Running Example
+### Install Prerequisite Tools
+Please install [Android Studio](https://developer.android.com/studio) and [XCode](https://itunes.apple.com/th/app/xcode/id497799835?mt=12). Don't forget to install Xcode Command Line Tools by using following command:
+```bash
+xcode-select --install
+```
 ### Install Dependencies
 ```bash
 $ yarn install

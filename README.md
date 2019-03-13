@@ -24,6 +24,7 @@ Please install [Android Studio](https://developer.android.com/studio) and [XCode
 xcode-select --install
 ```
 ### Install Dependencies
+Go to your cloned project and run:
 ```bash
 $ yarn install
 ```

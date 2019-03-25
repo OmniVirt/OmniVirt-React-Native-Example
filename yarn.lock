@@ -4296,10 +4296,10 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-omnivirt-react-native-sdk@^1.0.24:
-  version "1.0.24"
-  resolved "https://registry.yarnpkg.com/omnivirt-react-native-sdk/-/omnivirt-react-native-sdk-1.0.24.tgz#ef5a797a9f55427bf1c5ce8953e4bc1fe0e4e10b"
-  integrity sha512-8TpOryccNK4D+L+BVbLbFmczPPg6hR5JrWx0qELS66IzJRx0WN8uHhNGpgUPjRM4e9l1wU1kwHgli2hoqwXtAw==
+omnivirt-react-native-sdk@^1.0.25:
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/omnivirt-react-native-sdk/-/omnivirt-react-native-sdk-1.0.25.tgz#359fa289737c6a5d840f75fc3adf9165a4611a2f"
+  integrity sha512-/8xH9WHGxzTgnBq/cEJPCnPYcNIG5qNdOK0TjV5cwhYgtBc7F3JuK4FjGxuzrz4MvZ8laxrffEJMbbvv97CQNw==
   dependencies:
     omnivirt-react-native-sensors "git+https://github.com/OmniVirt/omnivirt-react-native-sensors.git"
     omnivirt-react-native-webview "git+https://github.com/OmniVirt/omnivirt-react-native-webview.git"

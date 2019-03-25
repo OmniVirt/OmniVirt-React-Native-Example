@@ -10,6 +10,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, ScrollView, View} from 'react-native';
 import VRPlayer from 'omnivirt-react-native-sdk';
+import { thisExpression } from '@babel/types';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -26,111 +27,100 @@ export default class App extends Component<Props> {
   }
 
   handleOnLoaded(player, maximumQuality, currentQuality, cardboard) {
-    this.setState({
-      output: this.state.output + `Loaded maximumQuality: ${maximumQuality} currentQuality: ${currentQuality} cardboard: ${cardboard}\n`
-    })
+    this.state.output = this.state.output + `Loaded maximumQuality: ${maximumQuality} currentQuality: ${currentQuality} cardboard: ${cardboard}\n`
+    this.forceUpdate()
+
+    var messageReceivedFn = (function(command, data, player) {
+      this.state.output = this.state.output + `Custom message received: ${command}=${JSON.stringify(data)}\n`
+      this.forceUpdate()
+    }).bind(this)
+    player.receiveMessage('custom', messageReceivedFn)
+    player.sendMessage('runscript', 'OmniVirt.api.sendMessage("custom", "Hello World")')
+    //player.unbind('custom', messageReceivedFn)
   }
 
   handleOnStarted(player) {
-    this.setState({
-      output: this.state.output + `Started\n`
-    })
+    this.state.output = this.state.output + `Started\n`
+    this.forceUpdate()
   }
 
   handleOnPaused(player) {
-    this.setState({
-      output: this.state.output + `Paused\n`
-    })
+    this.state.output = this.state.output + `Paused\n`
+    this.forceUpdate()
   }
 
   handleOnEnded(player) {
-    this.setState({
-      output: this.state.output + `Ended\n`
-    })
+    this.state.output = this.state.output + `Ended\n`
+    this.forceUpdate()
   }
 
   handleOnSkipped(player) {
-    this.setState({
-      output: this.state.output + `Skipped\n`
-    })
+    this.state.output = this.state.output + `Skipped\n`
+    this.forceUpdate()
   }
 
   handleOnDurationChanged(player, value) {
-    this.setState({
-      output: this.state.output + `Duration changed to ${value.toString()}\n`
-    })
+    this.state.output = this.state.output + `Duration changed to ${value.toString()}\n`
+    this.forceUpdate()
   }
 
   handleOnProgressChanged(player, value) {
-    /*this.setState({
-      output: this.state.output + `Progress changed to ${value.toString()}\n`
-    })*/
+    /*this.state.output = this.state.output + `Progress changed to ${value.toString()}\n`
+    this.forceUpdate()*/
   }
 
   handleOnBufferChanged(player, value) {
-    /*this.setState({
-      output: this.state.output + `Buffer changed to ${value.toString()}\n`
-    })*/
+    /*this.state.output = this.state.output + `Buffer changed to ${value.toString()}\n`
+    this.forceUpdate()*/
   }
 
   handleOnSeekChanged(player, value) {
-    this.setState({
-      output: this.state.output + `Seek changed to ${value.toString()}\n`
-    })
+    this.state.output = this.state.output + `Seek changed to ${value.toString()}\n`
+    this.forceUpdate()
   }
 
   handleOnCardboardChanged(player, value) {
-    this.setState({
-      output: this.state.output + `Cardboard changed to ${value.toString()}\n`
-    })
+    this.state.output = this.state.output + `Cardboard changed to ${value.toString()}\n`
+    this.forceUpdate()
   }
 
   handleOnVolumeChanged(player, value) {
-    this.setState({
-      output: this.state.output + `Volume changed to ${value.toString()}\n`
-    })
+    this.state.output = this.state.output + `Volume changed to ${value.toString()}\n`
+    this.forceUpdate()
   }
 
   handleOnQualityChanged(player, value) {
-    this.setState({
-      output: this.state.output + `Quality changed to ${value.toString()}\n`
-    })
+    this.state.output = this.state.output + `Quality changed to ${value.toString()}\n`
+    this.forceUpdate()
   }
 
   handleOnExpanded(player) {
     this.setState({
       isPlayerInFullscreenMode: true
     })
-    this.setState({
-      output: this.state.output + `Expanded\n`
-    })
+    this.state.output = this.state.output + `Expanded\n`
   }
 
   handleOnCollapsed(player) {
     this.setState({
       isPlayerInFullscreenMode: false
     })
-    this.setState({
-      output: this.state.output + `Collapsed\n`
-    })
+    this.state.output = this.state.output + `Collapsed\n`
   }
 
   handleOnLatitudeChanged(player, value) {
-    /*this.setState({
-      output: this.state.output + `Latitude changed to ${value.toString()}\n`
-    })*/
+    /*this.state.output = this.state.output + `Latitude changed to ${value.toString()}\n`
+    this.forceUpdate()*/
   }
 
   handleOnLongitudeChanged(player, value) {
-    /*this.setState({
-      output: this.state.output + `Longitude changed to ${value.toString()}\n`
-    })*/
+    /*this.state.output = this.state.output + `Longitude changed to ${value.toString()}\n`
+    this.forceUpdate()*/
   }
 
   handleOnSwitched(player, name, history) {
-    this.setState({
-      output: this.state.output + `Switched to ${name}\n`
-    })
+    this.state.output = this.state.output + `Switched to ${name}\n`
+    this.forceUpdate()
   }
 
   render() {
